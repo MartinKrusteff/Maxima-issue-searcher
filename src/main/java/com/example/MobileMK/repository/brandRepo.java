@@ -8,7 +8,4 @@ import org.springframework.data.repository.query.Param;
 import com.example.MobileMK.model.entity.BrandEntity;
 
 public interface brandRepo<brandEntity> extends JpaRepository<BrandEntity, Long>{
-
-        @Query(value = "SELECT * from brand_entity")
-        public <brandEntitys> List printAll();
 }
