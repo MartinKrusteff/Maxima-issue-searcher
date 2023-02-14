@@ -1,14 +1,19 @@
 package com.example.MobileMK.model.entity;
 import jakarta.persistence.*;
+
+import java.util.List;
+
 @Entity
 public class BrandEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
 
-    private String text;
+    @Column(length = 150)
+    public String name;
 
+    @Column(nullable=false, length = 150)
+    public String text;
     public String getText() {
         return text;
     }
@@ -31,6 +36,10 @@ public class BrandEntity {
 
     public void setName(String name) {
         this.name = name;
+
+    }
+    public static void addAttribute(String string, List<BrandEntity> findAll) {
+        // TODO Auto-generated method stub
 
     }
 
