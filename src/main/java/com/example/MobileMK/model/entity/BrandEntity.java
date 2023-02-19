@@ -9,10 +9,10 @@ public class BrandEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(length = 150)
+    @Column(length = 300)
     public String name;
 
-    @Column(nullable=false, length = 150)
+    @Column(nullable=false, length = 5000)
     public String text;
     public String getText() {
         return text;

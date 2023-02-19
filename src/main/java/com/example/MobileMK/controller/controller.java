@@ -30,7 +30,7 @@ public class controller {
     public String moviePage() {
         return "AddProblem";
     }
-    @PostMapping("/AddProblem")
+    @PostMapping("/addProblem")
     public String showMovieForm(BrandEntity brandEntity) {
         BrandRepo.saveAndFlush(brandEntity);
         return "AddProblem";
